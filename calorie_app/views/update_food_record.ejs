@@ -1,0 +1,70 @@
+<!--include Header-->
+<%- include('include/_food_header') %>
+<!--/include header-->
+
+
+    <!--Main Site -->
+    <main id = "site-main">
+        <div class = 'container'>
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/food-home"><i class="fas fa-angle-double-left"></i> All Records </a>
+                </div> 
+             
+        </div>
+
+        <div class="form-title text-center">
+            <h2 class="text-dark" >Update Food Record</h2>
+            <span class ="text-light"> Use the below form to update a food record</span>
+        </div>
+
+                <!--Form handling-->
+                <form method ="POST" id="update_record">
+
+                    <div class="new_user">
+                        <div class="form-group">
+                            <label for="food_name" class="text-light">Name of the Food</label>
+                            <input type="hidden" name="id" value ="<%= food._id %>">
+                            <input type="text" name="food_name" value="<%= food.food_name %>" placeholder= "Pizza" >
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="food_weight" class="text-light">Food Weight Consumed</label>
+                            <input type="number" name="food_weight" value="<%= food.food_weight %>" placeholder= "100" >
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="calories_hundred" class="text-light">Calories per 100g</label>
+                            <input type="number" name="calories_hundred" value="<%= food.calories_hundred %>" placeholder= "100" >
+                        </div>
+        
+                        <!-- <div class="form-group">
+                            <label for="caories" class="text-light">Calories</label>
+                            <input type="number" name="calories" value= "" placeholder= "100" >
+                        </div> -->
+        
+                        <div class="form-group">
+                            <button type="submit" class="btn text-dark update"> Save</button>
+                        </div>
+                    </div>
+                
+                    
+        
+                </form>
+
+            
+                
+       
+        </div>
+        
+    </main>
+
+    <!--/Main Site-->
+
+
+
+
+
+<!--include footer-->
+<%- include('include/_food_footer') %>
+<!--/include footer-->

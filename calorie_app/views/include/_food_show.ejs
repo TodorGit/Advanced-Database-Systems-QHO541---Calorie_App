@@ -1,0 +1,23 @@
+<%for(var i = 0; i < food_records.length; i++) { %>
+<tr>
+    <td><%= i+1%></td>
+    <td><%= food_records[i].food_name%></td>
+    <td><%= food_records[i].food_weight%></td>
+    <td><%= food_records[i].calories_hundred%></td>
+    <td><%= food_records[i].calories%></td>
+    <td>
+        <a href="/update-food-record?id=<%=food_records[i]._id%>" class= "btn border-shadow update">
+            <span class="text-gradient" ><i class="fa-solid fa-pen-to-square"></i></span>
+        </a>
+        <a href="/delete-food-record?id=<%=food_records[i]._id%>" class= "btn border-shadow delete">
+            <span class="text-gradient" ><i class="fa-solid fa-trash-can"></i></span>
+        </a>
+<!-- 
+        <a class= "btn border-shadow delete" data-id=<%=food_records[i]._id%>>
+            <span class="text-gradient" ><i class="fa-solid fa-trash-can"></i></span>
+        </a> -->
+        
+    </td>
+</tr>
+
+<% } %>

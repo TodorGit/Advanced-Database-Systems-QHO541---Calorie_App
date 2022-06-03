@@ -1,0 +1,75 @@
+<%- include('include/_login_header')%>
+
+<!-- <div class="container mt-5">
+    <h1>Login Here</h1>
+<form method="POST" action="/user-login">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" name="email"class="form-control" placeholder="Enter Your Email "id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name ="password" placeholder= "Enter Your Password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+ 
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+
+</div> -->
+
+
+<section class="vh-100">
+    <div class="cover">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-7">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-7 text-black">
+                  <div class="text-center">
+                  <%if(status=="FAILED"){%>
+                    <p style="color: red;"><%= message%></p>
+                    <%}else{%>
+                      <p style="color: blue;"><%= message%></p>
+                      <%}%>
+
+                    </div>
+  
+                  <form method= 'POST' action = "/user-login">
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+  
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example17">Email address</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example27">Password</label>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                    </div>
+
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="/user-register"
+                        style="color: #393f81;">Register here</a></p>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </section>
+
+
+
+<%- include('include/_login_footer') %>

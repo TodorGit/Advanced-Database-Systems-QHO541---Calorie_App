@@ -1,0 +1,50 @@
+    <!--Include Header-->
+    <%- include('include/_landing_header')%>
+    <!--Include Header-->
+
+
+    <!--Main site-->
+    <main>
+        <div class="cover">
+            <div class="navbar">
+               
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+
+                </ul>
+            </div>
+
+            <div class="content">
+                <h1>KEEP TRACK OF YOUR CALORIES</h1>
+                <P>Know Exactly what you are eating!</P>
+
+                <div class = "content-links">
+                    <a href ="/user-register">
+                    <button type="submit"><span></span> REGISTER</button></a>
+                    <a href ="/user-login">
+                    <button type="submit"><span></span>LOGIN</button></a>
+                </div>
+
+            </div>
+
+   
+        
+        </div>
+    </main>
+    <!--Main site-->
+
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+          
+        setTimeout("preventBack()", 0);
+          
+        window.onunload = function () { null };
+    </script>
+
+<!--include footer-->
+<%- include('include/_food_footer') %>
+<!--/include footer-->

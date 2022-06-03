@@ -1,0 +1,65 @@
+<!--include Header-->
+<%- include('include/_food_header') %>
+<!--/include header-->
+
+    <!--Main Site -->
+    <main id = "site-main">
+        <div class="cover">
+        <div class = 'container'>
+            <div class="box-nav d-flex justify-between"> 
+                <a href="/add-food-record" class="border-shadow">
+                <span class="text-gradient">New Food Record <i class="fa-solid fa-plus"></i></i></span>
+            </a>
+        </div>
+
+        <div class = 'container' id ="id_counter_container">
+            <div class = "count-nav d-flex justify-count" id ="display_counter_id">
+                <a href="/" class="text-gradient"><span class="text-gradient"> <i class="fa fa-sign-out"></i> Logout</span></a>
+            </div>
+        </div>
+        <!--Form handling-->
+        <form action="/" method = "POST">
+            <table class = "table">
+                <thead class = "thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name of the Food</th>
+                        <th>Food Weight Consumed (g)</th>
+                        <th>Calories per 100g</th>
+                        <th>Calories</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_food_show') %>
+                </tbody>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+        </form>
+           
+
+        </div>
+    </div>
+        
+    </main>
+
+
+
+    <!--/Main Site-->
+
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward(); 
+        }
+          
+        setTimeout("preventBack()", 0);
+          
+        window.onunload = function () { null };
+    </script>
+
+<!--include footer-->
+<%- include('include/_food_footer') %>
+<!--/include footer-->
